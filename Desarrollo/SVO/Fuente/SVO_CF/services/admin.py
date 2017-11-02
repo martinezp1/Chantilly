@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- kremlin Huaman
 from __future__ import unicode_literals
 
 from django.contrib import admin
