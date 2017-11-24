@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- kremlin Huaman
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.contrib import admin
@@ -9,7 +9,7 @@ from .models import Sede, Category, Product, Promotion, District
 
 class ProductAdmin(admin.ModelAdmin):
     model = Product
-    list_display = ['name', 'description']
+    list_display = ['name', 'description', 'category']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "sede":
@@ -24,4 +24,5 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Category)
 
