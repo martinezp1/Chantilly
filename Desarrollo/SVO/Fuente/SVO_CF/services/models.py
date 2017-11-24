@@ -63,6 +63,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=50, verbose_name='Marca')
     price = models.PositiveIntegerField(verbose_name='Precio')
     stock = models.PositiveIntegerField(verbose_name='Stock', null=True)
+    category = models.ForeignKey(Category, related_name='products', verbose_name='Categoría')
 
 
     def __str__(self):
